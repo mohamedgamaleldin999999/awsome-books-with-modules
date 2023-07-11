@@ -1,6 +1,8 @@
 import {Book} from './modules/book.js'
-
 import * as display from './modules/display.js'
+import {updateTime} from './modules/time.js'
+
+
 
 const bookObject = new Book();
 const addButton = document.querySelector('.add_button');
@@ -31,3 +33,5 @@ contact.addEventListener('click', () => {
   display.redIndicator(contact, list, add);
 });
 
+updateTime();
+setInterval(updateTime, 1000);
