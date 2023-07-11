@@ -1,14 +1,14 @@
 export default class Invalid {
-  constructor(reason, explanation) {
-    this.reason = reason;
-    this.explanation = explanation;
+  constructor (reason, explanation) {
+    this.reason = reason
+    this.explanation = explanation
   }
 
-  toMessage() {
+  toMessage () {
     if (this.explanation) {
-      return `${this.reason}: ${this.explanation}`;
+      return `${this.reason}: ${this.explanation}`
     } else {
-      return this.reason;
+      return this.reason
     }
   }
 }

@@ -1,2 +1,2 @@
-const { buildGlobal } = require("./build");
-buildGlobal().catch(console.error);
+const { buildGlobal } = require('./build')
+buildGlobal().catch(console.error)

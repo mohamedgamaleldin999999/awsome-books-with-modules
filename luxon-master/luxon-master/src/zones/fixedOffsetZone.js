@@ -1,7 +1,7 @@
-import { formatOffset, signedOffset } from "../impl/util.js";
-import Zone from "../zone.js";
+import { formatOffset, signedOffset } from '../impl/util.js'
+import Zone from '../zone.js'
 
-let singleton = null;
+let singleton = null
 
 /**
  * A zone with a fixed offset (meaning no DST)
@@ -12,11 +12,11 @@ export default class FixedOffsetZone extends Zone {
    * Get a singleton instance of UTC
    * @return {FixedOffsetZone}
    */
-  static get utcInstance() {
+  static get utcInstance () {
     if (singleton === null) {
-      singleton = new FixedOffsetZone(0);
+      singleton = new FixedOffsetZone(0)
     }
-    return singleton;
+    return singleton
   }
 
   /**
@@ -24,8 +24,8 @@ export default class FixedOffsetZone extends Zone {
    * @param {number} offset - The offset in minutes
    * @return {FixedOffsetZone}
    */
-  static instance(offset) {
-    return offset === 0 ? FixedOffsetZone.utcInstance : new FixedOffsetZone(offset);
+  static instance (offset) {
+    return offset === 0 ? FixedOffsetZone.utcInstance : new FixedOffsetZone(offset)
   }
 
   /**
@@ -36,67 +36,67 @@ export default class FixedOffsetZone extends Zone {
    * @example FixedOffsetZone.parseSpecifier("UTC-6:00")
    * @return {FixedOffsetZone}
    */
-  static parseSpecifier(s) {
+  static parseSpecifier (s) {
     if (s) {
-      const r = s.match(/^utc(?:([+-]\d{1,2})(?::(\d{2}))?)?$/i);
+      const r = s.match(/^utc(?:([+-]\d{1,2})(?::(\d{2}))?)?$/i)
       if (r) {
-        return new FixedOffsetZone(signedOffset(r[1], r[2]));
+        return new FixedOffsetZone(signedOffset(r[1], r[2]))
       }
     }
-    return null;
+    return null
   }
 
-  constructor(offset) {
-    super();
+  constructor (offset) {
+    super()
     /** @private **/
-    this.fixed = offset;
+    this.fixed = offset
   }
 
   /** @override **/
-  get type() {
-    return "fixed";
+  get type () {
+    return 'fixed'
   }
 
   /** @override **/
-  get name() {
-    return this.fixed === 0 ? "UTC" : `UTC${formatOffset(this.fixed, "narrow")}`;
+  get name () {
+    return this.fixed === 0 ? 'UTC' : `UTC${formatOffset(this.fixed, 'narrow')}`
   }
 
-  get ianaName() {
+  get ianaName () {
     if (this.fixed === 0) {
-      return "Etc/UTC";
+      return 'Etc/UTC'
     } else {
-      return `Etc/GMT${formatOffset(-this.fixed, "narrow")}`;
+      return `Etc/GMT${formatOffset(-this.fixed, 'narrow')}`
     }
   }
 
   /** @override **/
-  offsetName() {
-    return this.name;
+  offsetName () {
+    return this.name
   }
 
   /** @override **/
-  formatOffset(ts, format) {
-    return formatOffset(this.fixed, format);
+  formatOffset (ts, format) {
+    return formatOffset(this.fixed, format)
   }
 
   /** @override **/
-  get isUniversal() {
-    return true;
+  get isUniversal () {
+    return true
   }
 
   /** @override **/
-  offset() {
-    return this.fixed;
+  offset () {
+    return this.fixed
   }
 
   /** @override **/
-  equals(otherZone) {
-    return otherZone.type === "fixed" && otherZone.fixed === this.fixed;
+  equals (otherZone) {
+    return otherZone.type === 'fixed' && otherZone.fixed === this.fixed
   }
 
   /** @override **/
-  get isValid() {
-    return true;
+  get isValid () {
+    return true
   }
 }

@@ -9,8 +9,8 @@ class LuxonError extends Error {}
  * @private
  */
 export class InvalidDateTimeError extends LuxonError {
-  constructor(reason) {
-    super(`Invalid DateTime: ${reason.toMessage()}`);
+  constructor (reason) {
+    super(`Invalid DateTime: ${reason.toMessage()}`)
   }
 }
 
@@ -18,8 +18,8 @@ export class InvalidDateTimeError extends LuxonError {
  * @private
  */
 export class InvalidIntervalError extends LuxonError {
-  constructor(reason) {
-    super(`Invalid Interval: ${reason.toMessage()}`);
+  constructor (reason) {
+    super(`Invalid Interval: ${reason.toMessage()}`)
   }
 }
 
@@ -27,8 +27,8 @@ export class InvalidIntervalError extends LuxonError {
  * @private
  */
 export class InvalidDurationError extends LuxonError {
-  constructor(reason) {
-    super(`Invalid Duration: ${reason.toMessage()}`);
+  constructor (reason) {
+    super(`Invalid Duration: ${reason.toMessage()}`)
   }
 }
 
@@ -41,8 +41,8 @@ export class ConflictingSpecificationError extends LuxonError {}
  * @private
  */
 export class InvalidUnitError extends LuxonError {
-  constructor(unit) {
-    super(`Invalid unit ${unit}`);
+  constructor (unit) {
+    super(`Invalid unit ${unit}`)
   }
 }
 
@@ -55,7 +55,7 @@ export class InvalidArgumentError extends LuxonError {}
  * @private
  */
 export class ZoneIsAbstractError extends LuxonError {
-  constructor() {
-    super("Zone is an abstract class");
+  constructor () {
+    super('Zone is an abstract class')
   }
 }

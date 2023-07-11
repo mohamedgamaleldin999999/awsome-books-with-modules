@@ -2,103 +2,103 @@
  * @private
  */
 
-const n = "numeric",
-  s = "short",
-  l = "long";
+const n = 'numeric'
+const s = 'short'
+const l = 'long'
 
 export const DATE_SHORT = {
   year: n,
   month: n,
-  day: n,
-};
+  day: n
+}
 
 export const DATE_MED = {
   year: n,
   month: s,
-  day: n,
-};
+  day: n
+}
 
 export const DATE_MED_WITH_WEEKDAY = {
   year: n,
   month: s,
   day: n,
-  weekday: s,
-};
+  weekday: s
+}
 
 export const DATE_FULL = {
   year: n,
   month: l,
-  day: n,
-};
+  day: n
+}
 
 export const DATE_HUGE = {
   year: n,
   month: l,
   day: n,
-  weekday: l,
-};
+  weekday: l
+}
 
 export const TIME_SIMPLE = {
   hour: n,
-  minute: n,
-};
+  minute: n
+}
 
 export const TIME_WITH_SECONDS = {
   hour: n,
   minute: n,
-  second: n,
-};
+  second: n
+}
 
 export const TIME_WITH_SHORT_OFFSET = {
   hour: n,
   minute: n,
   second: n,
-  timeZoneName: s,
-};
+  timeZoneName: s
+}
 
 export const TIME_WITH_LONG_OFFSET = {
   hour: n,
   minute: n,
   second: n,
-  timeZoneName: l,
-};
+  timeZoneName: l
+}
 
 export const TIME_24_SIMPLE = {
   hour: n,
   minute: n,
-  hourCycle: "h23",
-};
+  hourCycle: 'h23'
+}
 
 export const TIME_24_WITH_SECONDS = {
   hour: n,
   minute: n,
   second: n,
-  hourCycle: "h23",
-};
+  hourCycle: 'h23'
+}
 
 export const TIME_24_WITH_SHORT_OFFSET = {
   hour: n,
   minute: n,
   second: n,
-  hourCycle: "h23",
-  timeZoneName: s,
-};
+  hourCycle: 'h23',
+  timeZoneName: s
+}
 
 export const TIME_24_WITH_LONG_OFFSET = {
   hour: n,
   minute: n,
   second: n,
-  hourCycle: "h23",
-  timeZoneName: l,
-};
+  hourCycle: 'h23',
+  timeZoneName: l
+}
 
 export const DATETIME_SHORT = {
   year: n,
   month: n,
   day: n,
   hour: n,
-  minute: n,
-};
+  minute: n
+}
 
 export const DATETIME_SHORT_WITH_SECONDS = {
   year: n,
@@ -106,16 +106,16 @@ export const DATETIME_SHORT_WITH_SECONDS = {
   day: n,
   hour: n,
   minute: n,
-  second: n,
-};
+  second: n
+}
 
 export const DATETIME_MED = {
   year: n,
   month: s,
   day: n,
   hour: n,
-  minute: n,
-};
+  minute: n
+}
 
 export const DATETIME_MED_WITH_SECONDS = {
   year: n,
@@ -123,8 +123,8 @@ export const DATETIME_MED_WITH_SECONDS = {
   day: n,
   hour: n,
   minute: n,
-  second: n,
-};
+  second: n
+}
 
 export const DATETIME_MED_WITH_WEEKDAY = {
   year: n,
@@ -132,8 +132,8 @@ export const DATETIME_MED_WITH_WEEKDAY = {
   day: n,
   weekday: s,
   hour: n,
-  minute: n,
-};
+  minute: n
+}
 
 export const DATETIME_FULL = {
   year: n,
@@ -141,8 +141,8 @@ export const DATETIME_FULL = {
   day: n,
   hour: n,
   minute: n,
-  timeZoneName: s,
-};
+  timeZoneName: s
+}
 
 export const DATETIME_FULL_WITH_SECONDS = {
   year: n,
@@ -151,8 +151,8 @@ export const DATETIME_FULL_WITH_SECONDS = {
   hour: n,
   minute: n,
   second: n,
-  timeZoneName: s,
-};
+  timeZoneName: s
+}
 
 export const DATETIME_HUGE = {
   year: n,
@@ -161,8 +161,8 @@ export const DATETIME_HUGE = {
   weekday: l,
   hour: n,
   minute: n,
-  timeZoneName: l,
-};
+  timeZoneName: l
+}
 
 export const DATETIME_HUGE_WITH_SECONDS = {
   year: n,
@@ -172,5 +172,5 @@ export const DATETIME_HUGE_WITH_SECONDS = {
   hour: n,
   minute: n,
   second: n,
-  timeZoneName: l,
-};
+  timeZoneName: l
+}

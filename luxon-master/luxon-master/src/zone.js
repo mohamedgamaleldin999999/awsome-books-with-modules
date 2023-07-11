@@ -1,4 +1,4 @@
-import { ZoneIsAbstractError } from "./errors.js";
+import { ZoneIsAbstractError } from './errors.js'
 
 /**
  * @interface
@@ -9,8 +9,8 @@ export default class Zone {
    * @abstract
    * @type {string}
    */
-  get type() {
-    throw new ZoneIsAbstractError();
+  get type () {
+    throw new ZoneIsAbstractError()
   }
 
   /**
@@ -18,12 +18,12 @@ export default class Zone {
    * @abstract
    * @type {string}
    */
-  get name() {
-    throw new ZoneIsAbstractError();
+  get name () {
+    throw new ZoneIsAbstractError()
   }
 
-  get ianaName() {
-    return this.name;
+  get ianaName () {
+    return this.name
   }
 
   /**
@@ -31,8 +31,8 @@ export default class Zone {
    * @abstract
    * @type {boolean}
    */
-  get isUniversal() {
-    throw new ZoneIsAbstractError();
+  get isUniversal () {
+    throw new ZoneIsAbstractError()
   }
 
   /**
@@ -44,8 +44,8 @@ export default class Zone {
    * @param {string} opts.locale - What locale to return the offset name in.
    * @return {string}
    */
-  offsetName(ts, opts) {
-    throw new ZoneIsAbstractError();
+  offsetName (ts, opts) {
+    throw new ZoneIsAbstractError()
   }
 
   /**
@@ -56,8 +56,8 @@ export default class Zone {
    *                          Accepts 'narrow', 'short', or 'techie'. Returning '+6', '+06:00', or '+0600' respectively
    * @return {string}
    */
-  formatOffset(ts, format) {
-    throw new ZoneIsAbstractError();
+  formatOffset (ts, format) {
+    throw new ZoneIsAbstractError()
   }
 
   /**
@@ -66,8 +66,8 @@ export default class Zone {
    * @param {number} ts - Epoch milliseconds for which to compute the offset
    * @return {number}
    */
-  offset(ts) {
-    throw new ZoneIsAbstractError();
+  offset (ts) {
+    throw new ZoneIsAbstractError()
   }
 
   /**
@@ -76,8 +76,8 @@ export default class Zone {
    * @param {Zone} otherZone - the zone to compare
    * @return {boolean}
    */
-  equals(otherZone) {
-    throw new ZoneIsAbstractError();
+  equals (otherZone) {
+    throw new ZoneIsAbstractError()
   }
 
   /**
@@ -85,7 +85,7 @@ export default class Zone {
    * @abstract
    * @type {boolean}
    */
-  get isValid() {
-    throw new ZoneIsAbstractError();
+  get isValid () {
+    throw new ZoneIsAbstractError()
   }
 }

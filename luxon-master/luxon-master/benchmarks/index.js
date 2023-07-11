@@ -1,12 +1,12 @@
-import dateTimeSuites from "./datetime";
-import infoSuites from "./info";
+import dateTimeSuites from './datetime'
+import infoSuites from './info'
 
-const allSuites = [...dateTimeSuites, ...infoSuites];
+const allSuites = [...dateTimeSuites, ...infoSuites]
 
-async function runAllSuites() {
+async function runAllSuites () {
   for (const runSuite of allSuites) {
-    await runSuite();
+    await runSuite()
   }
 }
 
-runAllSuites();
+runAllSuites()
